@@ -2,7 +2,7 @@
 <html lang="en">
 	{% load staticfiles %}
 	<head>
-		<title>{% block title %}{% endblock %}</title>
+		<title>NerdyScout | {% block title %}{% endblock %}</title>
 
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -21,11 +21,13 @@
 
 	<body>
 		<header>
-			<nav class="blue" role="navigation">
+			<nav class="indigo darken-2" role="navigation">
 				<div class="container">
 					<div class="nav-wrapper"><a id="logo-container" href="/" class="brand-logo hide-on-med-and-down">NerdyScout</a>
 						<ul class="right hide-on-med-and-down">
 							<li><a href="/">Home</a></li>
+							<li><a href="/scout">Scout</a></li>
+							<li><a href="/data">Analyze</a></li>
 						</ul>
 
 						<ul id="nav-mobile" class="side-nav">
@@ -33,6 +35,8 @@
 								<object id="front-page-logo" type="image/png" data="{% static 'img/favicon.png' %}"></object></a></li>
 							<div class="divider"></div>
 							<li><a href="/">Home</a></li>
+							<li><a href="/scout">Scout</a></li>
+							<li><a href="/data">Analyze</a></li>
 						</ul>
 						<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 					</div>
@@ -42,7 +46,7 @@
 		
 		{% block main %}{% endblock %}
 
-		<footer class="grey darken-2 page-footer">
+		<footer class="indigo darken-2 page-footer">
 			<div class="container">
 				<div class="row">
 					<div class="col m6 s12">
@@ -53,13 +57,17 @@
 						<h5 class="white-text">Pages</h5>
 						<ul>
 							<li><a class="white-text" href="/">Home</a></li>
+							<li><a class="white-text" href="/scout">Scout</a></li>
+							<li><a class="white-text" href="/analyze">Analyze</a></li>
 						</ul>
 					</div>
 					<div class="col m3 s12">
 						<h5 class="white-text">Connect</h5>
 						<ul>
 							<li><a class="white-text" href="http://firstinspires.org" target="_blank">FIRST</a></li>
-							<li><a class="white-text" href="http://thebluealliance.com" target="_blank">The Blue Alliance</a></li>
+							<li><a class="white-text" href="http://theindigoalliance.com" target="_blank">The indigo Alliance</a></li>
+							<li><a class="white-text" href="http://chiefdelphi.com" target="_blank">Chief Delphi</a></li>
+							<li><a class="white-text" href="http://camsrobotics.org" target="_blank">CAMS Robotics</a></li>
 						</ul>
 					</div>
 				</div>
@@ -74,7 +82,7 @@
 			<div id="license" class="modal modal-fixed-footer">
 				<div class="modal-content">
 				<h4>The MIT License (MIT)</h4>
-					<p>Copyright &copy; 2016 CAMS Robotics<br><br>
+					<p>Copyright &copy; 2016 Wesley Soo-Hoo<br><br>
 					Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.<br><br>
 					THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p><br>
 				</div>
@@ -87,7 +95,8 @@
 
 		<script src="{% static 'jquery.min.js' %}"></script>
 		<script src="{% static 'js/materialize.min.js' %}"></script>
-		<script src="{% static 'js/init.js' %}"
+		<script src="{% static 'js/init.js' %}"</script>
+		{% block js %}{% endblock %}
 	</body>
 
 </html>

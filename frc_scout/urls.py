@@ -17,5 +17,9 @@ from django.conf.urls import url
 from frc_scout import views
 
 urlpatterns = [
-	url(r'^$', views.home)
+	
+	url(r'^$', views.home),
+	url(r'^scout/$', views.scout),
+	url(r'^data/$', views.data)
+	
 ]
