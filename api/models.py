@@ -12,24 +12,29 @@ class team(models.Model):
         db_table = 'teams'
 
 class match(models.Model):
-    matchNumber = models.IntegerField(blank=False)
-    team = models.ForeignKey("team", on_delete=models.CASCADE, blank=False)
-    defenseA = (
+    DEFENSE_A = (
         ("P", "Portcullis"),
         ("CF", "Cheval de Frise"),
     )
-    defenseB = (
+    DEFENSE_B = (
         ("M", "Moat"),
         ("R", "Ramparts"),
     )
-    defenseC = (
+    DEFENSE_C = (
         ("D", "Drawbridge"),
         ("SP", "Sally Port"),
     )
-    defenseD = (
+    DEFENSE_D = (
         ("RW", "Rock Wall"),
         ("RT", "Rough Terrain"),
     )
+
+    matchNumber = models.IntegerField(blank=False)
+    team = models.ForeignKey("team", on_delete=models.CASCADE, blank=False)
+    defenseA = models.CharField(max_length=2, choices=DEFENSE_A, default="P")
+    defenseB = models.CharField(max_length=2, choices=DEFENSE_B, default="M")
+    defenseC = models.CharField(max_length=2, choices=DEFENSE_C, default="D")
+    defenseD = models.CharField(max_length=2, choices=DEFENSE_D, default="RW")
 
     class Meta:
         db_table = 'matches'
