@@ -8,10 +8,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 		<meta name="description"  content="NerdyScout: A Scouting Website made by Team 687: The Nerd Herd" />
 		<meta name="keywords"  content="frc, first, scouting, california academy of mathematics and science" />
-		
+
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
-		
+
 		<!-- CSS  -->
 		<link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}" />
 		<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
@@ -25,9 +25,10 @@
 				<div class="container">
 					<div class="nav-wrapper"><a id="logo-container" href="/" class="brand-logo hide-on-med-and-down">NerdyScout</a>
 						<ul class="right hide-on-med-and-down">
-							<li><a href="/">Home</a></li>
-							<li><a href="/scout">Scout</a></li>
-							<li><a href="/data">Analyze</a></li>
+							<li><a class="waves-effect waves-light" href="/">Home</a></li>
+							<li><a class="waves-effect waves-light" href="/scout">Scout</a></li>
+							<li><a class="waves-effect waves-light" href="/data">Analyze</a></li>
+							<li><a class="waves-effect waves-light modal-trigger" href="#helpmodal"><i class="mdi-action-info-outline"></i></a></li>
 						</ul>
 
 						<ul id="nav-mobile" class="side-nav">
@@ -43,8 +44,18 @@
 				</div>
 			</nav>
 		</header>
-		
+
 		{% block main %}{% endblock %}
+
+		<div id="helpmodal" class="modal">
+			<div class="modal-content">
+				<h4>{% block helptitle %}{% endblock %}</h4>
+				<p>{% block helptext %}{% endblock %}</p>
+			</div>
+			<div class="modal-footer">
+				<button class="waves-effect waves-light btn modal-action modal-close indigo darken-3">Got it</button>
+			</div>
+		</div>
 
 		<footer class="indigo darken-2 page-footer">
 			<div class="container">
@@ -78,7 +89,7 @@
 					<a class="grey-text text-lighten-2 right modal-trigger" href="#license">MIT License</a>
 				</div>
 			</div>
-			
+
 			<div id="license" class="modal modal-fixed-footer">
 				<div class="modal-content">
 				<h4>The MIT License (MIT)</h4>
@@ -93,9 +104,9 @@
 
 		</footer>
 
-		<script src="{% static 'jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery.min.js' %}"></script>
 		<script src="{% static 'js/materialize.min.js' %}"></script>
-		<script src="{% static 'js/init.js' %}"</script>
+		<script src="{% static 'js/init.js' %}"></script>
 		{% block js %}{% endblock %}
 	</body>
 

@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'frc_scout'
+	'frc_scout',
+    'api'
 ]
 
 MIDDLEWARE_CLASSES = [
