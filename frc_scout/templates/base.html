@@ -2,7 +2,7 @@
 <html lang="en">
 	{% load staticfiles %}
 	<head>
-		<title>NerdyScout | {% block title %}{% endblock %}</title>
+		<title>{% block title %}{% endblock %} | NerdyScout</title>
 
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -26,6 +26,7 @@
 					<div class="nav-wrapper"><a id="logo-container" href="/" class="brand-logo hide-on-med-and-down">NerdyScout</a>
 						<ul class="right hide-on-med-and-down">
 							<li><a class="waves-effect waves-light" href="/">Home</a></li>
+							<li><a class="waves-effect waves-light" href="/event">Event Setup</a></li>
 							<li><a class="waves-effect waves-light" href="/scout">Scout</a></li>
 							<li><a class="waves-effect waves-light" href="/data">Analyze</a></li>
 							<li><a class="waves-effect waves-light modal-trigger" href="#helpmodal"><i class="mdi-action-info-outline"></i></a></li>
@@ -36,6 +37,7 @@
 								<object id="front-page-logo" type="image/png" data="{% static 'img/favicon.png' %}"></object></a></li>
 							<div class="divider"></div>
 							<li><a href="/">Home</a></li>
+							<li><a href="/event">Event Setup</a></li>
 							<li><a href="/scout">Scout</a></li>
 							<li><a href="/data">Analyze</a></li>
 						</ul>
@@ -68,6 +70,7 @@
 						<h5 class="white-text">Pages</h5>
 						<ul>
 							<li><a class="white-text" href="/">Home</a></li>
+							<li><a class="white-text" href="/event">Event Setup</a></li>
 							<li><a class="white-text" href="/scout">Scout</a></li>
 							<li><a class="white-text" href="/analyze">Analyze</a></li>
 						</ul>
@@ -98,7 +101,7 @@
 					THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p><br>
 				</div>
 				<div class="modal-footer">
-					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+					<a href="#!" class="modal-action modal-close waves-effect waves-light btn-flat">Agree</a>
 				</div>
 			</div>
 

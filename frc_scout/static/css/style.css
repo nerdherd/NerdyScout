@@ -13,3 +13,7 @@ footer {
 	height: 10%;
 	bottom: 0px;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
