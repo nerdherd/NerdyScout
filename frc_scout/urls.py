@@ -16,14 +16,23 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from frc_scout import views
+from api import teams
 
 urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
 
+    # Home
 	url(r'^$', views.home),
+
+    # Pre Event
     url(r'^event/$', views.setup),
+    url(r'^api/addteam/$', teams.add_team),
+
+    # Match Scout
 	url(r'^scout/$', views.scout),
+
+    # Data Analysis
 	url(r'^data/$', views.data)
 
 ]
