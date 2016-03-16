@@ -26,7 +26,7 @@ urlpatterns = [
 	url(r'^$', views.home),
 
     # Pre Event
-    url(r'^event/$', views.setup),
+    url(r'^setup/$', views.setup),
     url(r'^api/addteam/$', teams.add_team),
 
     # Match Scout

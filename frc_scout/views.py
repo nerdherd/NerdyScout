@@ -6,7 +6,7 @@ def home(request):
 	return render(request, 'home.html')
 
 def setup(request):
-	return render(request, 'event.html')
+	return render(request, 'setup.html')
 
 def scout(request):
 	return render(request, 'scout.html')

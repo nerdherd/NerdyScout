@@ -1,4 +1,5 @@
 from api.models import team
+import json
 from django.http import HttpResponse
 
 def insert_team(name, number):
@@ -10,8 +11,8 @@ def insert_team(name, number):
         return False
 
 def add_team(request):
-    name = request.POST['name']
-    number = request.POST['number']
+    name = request.GET['name']
+    number = request.GET['number']
 
     try:
         repeat_number = True
