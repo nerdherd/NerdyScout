@@ -11,5 +11,11 @@ def setup(request):
 def scout(request):
 	return render(request, 'scout.html')
 
+def scout_config(request):
+	return render(request, 'scoutconfig.html')
+
+def scout_auto(request):
+	return render(request, 'scoutauto.html')
+
 def data(request):
 	return render(request, 'data.html')

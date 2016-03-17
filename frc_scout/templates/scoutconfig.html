@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Scouting{% endblock %}
+
+{% block main %}
+<main>
+	<div class="no-pad-bot section" id="index-banner">
+		<div class="container">
+			<h1 class="header center pink-text text-accent-3">Scouting Configuration</h1>
+		</div>
+	</div>
+
+  <div class="container center">
+		<div class="section">
+			<form action="auto">
+				<div class="row">
+					<h5 class="light">Team Info</h5>
+					<div class="input-field col s12 m6 offset-m3">
+						<i class="mdi-social-person prefix"></i>
+						<input id="team" name="team" type="number" class="validate">
+						<label for="team">Team Number</label>
+					</div>
+					<div class="input-field col s12 m6 offset-m3">
+						<i class="mdi-social-person prefix"></i>
+						<input id="match" name="match" type="number" class="validate">
+						<label for="match">Match Number</label>
+					</div>
+
+          <div class="input-field col s12 m6 offset-m3">
+						<h5 class="light">Alliance Color</h5>
+            <div class="row">
+              <div class="col s6 m6">
+                <p>
+                  <input name="red" type="radio" id="red" />
+                  <label for="red">Red</label>
+                </p>
+              </div>
+              <div class="col s6 m6">
+                <p>
+                  <input name="blue" type="radio" id="blue" />
+                  <label for="blue">Blue</label>
+                </p>
+              </div>
+            </div>
+          </div>
+				</div>
+
+				<div class="center">
+					<button class="btn waves-effect waves-light indigo darken-2" type="submit" name="action">go
+						<i class="mdi-content-send right"></i>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+{% endblock %}
+
+{% block helptitle %}Scouting Setup{% endblock %}
+{% block helptext %}Enter in all needed data about a team prior to the match!{% endblock %}

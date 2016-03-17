@@ -6,6 +6,8 @@ from .models import team, match
 class teamAdmin(admin.ModelAdmin):
     list_display = ('teamName', 'teamNumber', 'avgScore')
 
+class matchAdmin(admin.ModelAdmin):
+    list_display = ('matchNumber', 'team', 'alliance', 'score')
 
 admin.site.register(team, teamAdmin)
-admin.site.register(match)
+admin.site.register(match, matchAdmin)

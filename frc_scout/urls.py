@@ -31,6 +31,8 @@ urlpatterns = [
 
     # Match Scout
 	url(r'^scout/$', views.scout),
+    url(r'^scout/config/$', views.scout_config),
+    url(r'^scout/auto/$', views.scout_auto),
 
     # Data Analysis
 	url(r'^data/$', views.data)
